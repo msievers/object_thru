@@ -1,4 +1,6 @@
 # ObjectThru
+[![Build Status](https://travis-ci.org/msievers/object_thru.svg?branch=master)](https://travis-ci.org/msievers/object_thru)
+[![Test Coverage](https://codeclimate.com/github/msievers/object_thru/badges/coverage.svg)](https://codeclimate.com/github/msievers/object_thru)
 [![Code Climate](https://codeclimate.com/github/msievers/object_thru/badges/gpa.svg)](https://codeclimate.com/github/msievers/object_thru)
 
 This is a ruby gem which provides ```Object#thru``` as a complement to Ruby's ```Object#tap```. ```Object#thru``` comes handy if you are doing lots of chained/functional style programming and you want to return the result of a chained call without the need for temp variables.
