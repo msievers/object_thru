@@ -8,4 +8,3 @@ rvm:
   - "jruby"
   - "jruby-head"
   - "rbx"
-  - "rbx-head"
