@@ -1,6 +1,6 @@
 # ObjectThru
 
-This is a ruby gem which provides Object#thru as a complement to Ruby's Object#tap. ```thru``` comes handy if you are doing lots of chained/functional style programming. ```Object#tap``` is very cool, but there are situations, where you want to return the result of a chained call, instead of the object you called something on.
+This is a ruby gem which provides ```Object#thru``` as a complement to Ruby's ```Object#tap```. ```Object#thru``` comes handy if you are doing lots of chained/functional style programming and you want to return the result of a chained call without the need for temp variables.
 
 ## Installation
 
