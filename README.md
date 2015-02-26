@@ -31,7 +31,7 @@ require "object_thru"
 
 [1,2,3]
 .map { |integer| integer * 3 }
-.reject { |integer| integer >= 9 }
+.reject { |integer| integer <= 9 }
 .thru do |array|
   array.length <= 1 ? array.first : array
 end
