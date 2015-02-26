@@ -26,14 +26,14 @@ describe ObjectThru do
 
     context "if a callable is given" do
       it "calls the callable with the object" do
-        callable = -> (object) { object }
+        callable = ->(object) { object }
 
         some_object = Object.new
         expect(some_object.thru(callable).object_id).to eq(some_object.object_id)
       end
 
       it "it returns the result of the callable" do
-        callable = -> (integer) { integer + 1 }
+        callable = ->(integer) { integer + 1 }
 
         some_number = 1
         expect(some_number.thru(callable)).to eq(callable.call(some_number))
