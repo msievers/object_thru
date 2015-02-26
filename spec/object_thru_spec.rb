@@ -1,9 +1,9 @@
 describe ObjectThru do
-  it "adds #thru to Object" do
+  it "adds Object#thru" do
     expect(Object.new).to respond_to(:thru)
   end
 
-  describe "#thru" do
+  describe "Object#thru" do
     context "if a block is given" do
       it "yields the object to the block" do
         array = [1,2,3]
