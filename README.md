@@ -20,11 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-```Object#thru``` accepts either a block or a callable. If a block is given, the block is called with the object, ```#thru``` was called on. If called with a callable, the callable is called with the object, ```#thru``` was called on.
+```Object#thru``` accepts either a block or a callable. If a block is given, the block is called with the object, ```Object#thru``` was called on. If called with a callable, the callable is called with the object, ```Object#thru``` was called on.
 
 ## Examples
 
-### Using ```#thru``` with a block
+### Using ```Object#thru``` with a block
 ```ruby
 require "object_thru"
 
@@ -37,7 +37,7 @@ end
 # => 9
 ```
 
-### Using ```#thru``` with a callable
+### Using ```Object#thru``` with a callable
 ```ruby
 require "object_thru"
 
