@@ -1,6 +1,6 @@
 # ObjectThru
 
-TODO: Write a gem description
+This is a ruby gem which provides Object#thru as a complement to Ruby's Object#tap. ```thru``` comes handy if you are doing lots of chained/functional style programming. ```Object#tap``` is very cool, but there are situations, where you want to return the result of a chained call, instead of the object you called something on.
 
 ## Installation
 
@@ -20,11 +20,34 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```Object#thru``` accepts either a block or a callable. If a block is given, the block is called with the object, ```#thru``` was called on. If called with a callable, the callable is called with the object, ```#thru``` was called on.
 
+## Examples
+
+### Using ```#thru``` with a block
+```ruby
+require "object_thru"
+
+[1,2,3]
+.map { |integer| integer * 3 }
+.reject { |integer| integer >= 9 }
+.thru do |array|
+  array.length <= 1 ? array.first : array
+end
+# => 9
+```
+
+### Using ```#thru``` with a callable
+```ruby
+require "object_thru"
+
+ensure_integer = -> (object) { object.respond_to?(:to_i) ? object.to_i : 0 }
+"123".thru(ensure_integer)
+# => 123
+```
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/object_thru/fork )
+1. Fork it ( https://github.com/msievers/object_thru/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
